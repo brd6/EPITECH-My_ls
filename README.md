@@ -8,7 +8,7 @@ This project consists of replicating the ls function of Unix system.
 ./my_ls [-lRdrtuFgf] [FILE]
 ```
 
-### Exemples :
+### Examples :
 
 ```
 $ ./my_ls -l -t

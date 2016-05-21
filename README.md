@@ -1,5 +1,3 @@
-# EPITECH-My_ls
-
 This project consists of replicating the ls function of Unix system.
 
 ### Usage :

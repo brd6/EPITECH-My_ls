@@ -5,13 +5,15 @@
 ** Login   <bongol_b@epitech.net>
 **
 ** Started on  Sat Nov 21 10:48:31 2015 berdrigue bongolo-beto
-** Last update Sat Nov 28 19:59:00 2015 berdrigue bongolo-beto
+** Last update Sun May 22 00:41:45 2016 Berdrigue BONGOLO BETO
 */
 
 #ifndef MY_LS_H_
 # define MY_LS_H_
 
 # include <sys/stat.h>
+# include "my.h"
+# include "my_printf.h"
 
 # define WHITE	"\033[0m"
 # define RED	"\033[0;31m"
@@ -70,4 +72,13 @@ t_file_info	*add_file_fileinfo(t_my_ls info);
 void		set_files_scond(int *j, int *k, t_my_ls *info);
 int		check_R(t_my_ls *info, t_dir_bak *dir_bak, t_file_info *file_i);
 int		my_ls_scond2(int *rev, int *i, t_my_ls *info, t_file_info *file);
+int		date_sort_files_tab(t_file_info *file_info);
+void		print_file_total(t_my_ls *info, t_file_info *file_info);
+int		default_display(t_my_ls *info, t_my_file *file, char *base_dir);
+int		list_display(t_my_ls *info, t_my_file *file, t_file_info *file_info);
+int		sort_files_tab2(char **files, int(*cmp)(char *, char *));
+int		my_ls2(t_my_ls *info, t_file_info *file_info);
+void		reset_options(t_my_ls *info);
+int		set_options(t_my_ls *info, int ac, char **av);
+
 #endif /* !MY_LS_H_ */

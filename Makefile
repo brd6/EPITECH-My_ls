@@ -5,7 +5,7 @@
 ## Login   <bongol_b@epitech.net>
 ## 
 ## Started on  Sun Nov  1 21:13:19 2015 berdrigue bongolo-beto
-## Last update Sun Nov 29 19:32:01 2015 berdrigue bongolo-beto
+## Last update Sun May 22 00:44:49 2016 Berdrigue BONGOLO BETO
 ##
 
 CC	= 	gcc
@@ -32,17 +32,12 @@ OBJS	= 	$(SRCS:.c=.o)
 
 CFLAGS	=	-I./include/
 
-LDFLAGS	+=	-L./lib -lmy
-
-LDFLAGS	+= 	-W -Wall -Wextra
+LDFLAGS	=	-L./lib -lmy -lmyprintf
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(CC) $(OBJS) $(LDFLAGS) -o $(NAME)
-
-$(OBJS):
-	@$(CC) -c $(SRCS) $(CFLAGS)
 
 clean:
 	@$(RM) $(OBJS)
@@ -52,4 +47,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean, mrproper, re, all, fclean
+.PHONY: clean, re, all, fclean
